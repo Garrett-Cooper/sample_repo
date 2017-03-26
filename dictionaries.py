@@ -146,3 +146,139 @@ for name in favorite_languages.keys():
 # you can use the keys method to look up a particular key (ex: 'erin')
 if 'erin' not in favorite_languages.keys():
     print("Erin, please take our poll!")
+
+print("\n")
+# looping through a dictionary's KEYS in order
+
+favorite_languages = {
+    'jen':'python',
+    'sarah':'c',
+    'edward':'ruby',
+    'phil':'python',
+}
+
+for name in sorted(favorite_languages.keys()):
+    print(name.title() + ", thank you for taking the poll.")
+
+print("\n")
+
+# looping through a dictionary's VALUES, no duplicates
+
+favorite_languages = {
+    'jen':'python',
+    'sarah':'c',
+    'edward':'ruby',
+    'phil':'python',
+}
+
+print("The following languages have been mentioned:")
+for language in favorite_languages.values():
+    print(language.title())
+
+print("\n")
+
+# we can use SET to pull out the unique languages in favorite_languages.values()
+
+favorite_languages = {
+    'jen':'python',
+    'sarah':'c',
+    'edward':'ruby',
+    'phil':'python',
+}
+
+print("The following languages have been mentioned:")
+for language in set(favorite_languages.values()):
+    print(language.title())
+
+print("\n")
+
+# NESTING
+
+# A LIST of DICTIONARIES
+
+alien_0 = {'color':'green', 'points':5}
+alien_1 = {'color':'yellow', 'points':10}
+alien_2 = {'color':'red', 'points':15}
+
+aliens = [alien_0, alien_1, alien_2]
+
+for alien in aliens:
+    print(alien)
+
+print("\n")
+
+# Now we create 30 aliens
+
+# make an empty list
+aliens =[]
+
+# make 30 green aliens
+for alien_number in range(30):
+    new_alien = {'color':'green','points':5, 'speed':'slow'}
+    aliens.append(new_alien)
+
+# show the first 5 aliens:
+for alien in aliens[:5]:
+    print(alien)
+print("...")
+
+# show how many aliens have been created.
+print ("Total number of aliens: " + str(len(aliens)))
+
+print("\n")
+#-------------------------
+# make 30 green aliens
+for alien_number in range(30):
+    new_alien = {'color':'green','points':5, 'speed':'slow'}
+    aliens.append(new_alien)
+
+# show the first 5 aliens:
+for alien in aliens[0:3]:
+    if alien['color']=='green':
+        alien['color'] = 'yellow'
+        alien['speed'] = 'medium'
+        alien['points'] = 10
+    elif alien['color']=='yellow':
+        alien['color'] = 'red'
+        alien['speed'] = 'fast'
+        alien['points'] = 15
+
+# show the first 5 aliens:
+for alien in aliens[0:5]:
+    print(alien)
+print("...")
+
+for alien in aliens[0:3]:
+    if alien['color']=='green':
+        alien['color'] = 'yellow'
+        alien['speed'] = 'medium'
+        alien['points'] = 10
+    elif alien['color']=='yellow':
+        alien['color'] = 'red'
+        alien['speed'] = 'fast'
+        alien['points'] = 15
+
+# show the first 5 aliens:
+for alien in aliens[0:5]:
+    print(alien)
+print("...")
+
+#-------------------------------
+# A LIST IN A DICTIONARY
+
+# store information about a pizza being ordered.
+pizza = {
+    'crust':'thick',
+    'toppings': ['mushrooms','extra cheese'],
+}
+
+# summarize the order
+print ("You ordered a " + pizza['crust'] + "-crust pizza " +
+    "with the following toppings:")
+
+for topping in pizza['toppings']:
+    print ("\t" + topping)
+
+print("\n")
+#-------------------------
+# make 30 green aliens
